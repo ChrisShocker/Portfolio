@@ -94,6 +94,13 @@ input[type="text"]:focus {
 }
 
 
+/* About Section */
+.about-header{
+  position: relative;
+  z-index: -1;
+}
+
+
 
 /* Button Section */
 button {
