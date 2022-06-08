@@ -5,8 +5,6 @@ import Form from 'react-bootstrap/Form';
 function ReportForm()
 {
     return (
-        <div>
-
             <div className="d-flex flex-column justify-content-center align-items-center">
                 <div className="body-form-container flex-column w-25">
                     <Form>
@@ -46,11 +44,6 @@ function ReportForm()
                     </Form>
                 </div>
             </div>
-
-
-        </div>
-
-
     );
 }
 
