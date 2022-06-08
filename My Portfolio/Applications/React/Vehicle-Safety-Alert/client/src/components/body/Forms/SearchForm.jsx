@@ -5,9 +5,8 @@ import Form from 'react-bootstrap/Form';
 function SearchForm()
 {
     return (
-
         <div className="d-flex flex-column justify-content-center align-items-center">
-            <div className="body-form-container flex-column w-25">
+            <div className="body-forms-SearchForm-container flex-column w-25 rounded">
                 <Form>
                     <h1 className="text-center fw-bold">Check a License Plate</h1>
                     <Form.Group className="mb-3" controlId="formBasicEmail">

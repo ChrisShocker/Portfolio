@@ -1,7 +1,7 @@
 import React from "react";
-import ReportForm from "./body/Forms/ReportForm";
-import SearchForm from "./body/Forms/SearchForm";
 import Intro from "./body/Intro";
+import ReportForm from "./body/forms/ReportForm";
+import SearchForm from "./body/forms/SearchForm";
 
 function App(){
     return(

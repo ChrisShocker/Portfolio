@@ -1,8 +1,17 @@
-.body-form-container{
-    background-color: azure;
+
+/* ReportForm Section */
+.body-forms-ReportForm-container{
+    background-color: rgb(202, 255, 255);
     padding: 2rem 1rem 2rem 1rem;
 }
 
-.body-form-checkbox{
+.body-forms-ReportForm-checkbox{
     padding: 0.3rem 0 0.3rem !important;
+}
+
+/* SearchForm Section */
+.body-forms-SearchForm-container{
+    background-color: rgb(192, 204, 204);
+    margin-top: 3rem;
+    padding: 2rem 1rem 2rem 1rem;
 }
