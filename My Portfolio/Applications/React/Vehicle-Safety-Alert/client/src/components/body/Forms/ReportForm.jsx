@@ -8,8 +8,9 @@ function ReportForm()
     const [report, setReport] = useState({
         state: "",
         licensePlate: "",
-        issue: ""
     });
+
+    const [issues, setIssues] = useState([]);
 
     function handleChange(event)
     {
@@ -23,29 +24,38 @@ function ReportForm()
         });
     }
 
-    function handleCheckbox(event, props)
+    async function handleCheckbox(event, props)
     {
         console.log(event.target.checked);
         const { name, value } = event.target;
 
         if (event.target.checked)
         {
-            setReport(prevValue =>
+            setIssues(() =>
             {
-                return {
-                    ...prevValue,
-                    [name]: value,
-                }
+                return [
+                    ...issues,
+                    value
+                ]
             });
         }
-        else{
-            setReport(prevValue =>
+        else
+        {
+            if (issues.length >= 1)
             {
-                return {
-                    ...prevValue,
-                    issue: "",
+                console.log(value);
+                var index = issues.indexOf(value);
+                if(index >= 0){
+                    issues.splice(index, 1);
                 }
-            });
+                setIssues(() =>
+                {
+                    return {
+                        ...issues,
+                    }
+                });
+
+            }
 
         }
 
@@ -54,7 +64,7 @@ function ReportForm()
     async function handleSubmit(event)
     {
         await event.preventDefault();
-        console.log(report);
+        console.log(issues);
         // await fetch("/createReport", {
         //     method: 'Post',
         //     headers: { "Content-Type": "application/json" },
@@ -135,28 +145,28 @@ function ReportForm()
 
                         <div className="d-flex flex-column w-25">
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check 
-                                className="body-forms-ReportForm-checkbox" 
-                                type="checkbox" 
-                                label="Tail Light" 
-                                name="issue"
-                                value="Tail Light"
+                                <Form.Check
+                                    className="body-forms-ReportForm-checkbox"
+                                    type="checkbox"
+                                    label="Tail Light"
+                                    name="issue"
+                                    value="Tail Light"
                                 />
 
-                                <Form.Check 
-                                className="body-forms-ReportForm-checkbox" 
-                                type="checkbox" 
-                                label="Reverse Light" 
-                                name="issue"
-                                value="Reverse Light"
+                                <Form.Check
+                                    className="body-forms-ReportForm-checkbox"
+                                    type="checkbox"
+                                    label="Reverse Light"
+                                    name="issue"
+                                    value="Reverse Light"
                                 />
 
-                                <Form.Check 
-                                className="body-forms-ReportForm-checkbox" 
-                                type="checkbox" 
-                                label="Rear Blinker" 
-                                name="issue"
-                                value="Rear Light"
+                                <Form.Check
+                                    className="body-forms-ReportForm-checkbox"
+                                    type="checkbox"
+                                    label="Rear Blinker"
+                                    name="issue"
+                                    value="Rear Light"
                                 />
                             </Form.Group>
                         </div>
