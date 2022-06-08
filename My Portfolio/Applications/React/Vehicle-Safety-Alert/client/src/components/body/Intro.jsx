@@ -4,7 +4,6 @@ function Intro()
 {
     useEffect(() =>
     {
-
         var timer = setTimeout(() =>
         {
             alert("This website is still a WIP");
@@ -15,7 +14,6 @@ function Intro()
             clearTimeout(timer);
         }
     }, []);
-
 
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
@@ -30,7 +28,6 @@ function Intro()
                     Also, please lookup your License plate to ensure you're driving safe
                 </p>
             </div>
-
         </div>
     );
 }
