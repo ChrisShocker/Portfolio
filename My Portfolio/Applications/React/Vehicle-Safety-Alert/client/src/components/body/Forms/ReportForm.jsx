@@ -6,7 +6,7 @@ function ReportForm()
 {
     return (
             <div className="d-flex flex-column justify-content-center align-items-center">
-                <div className="body-form-container flex-column w-25">
+                <div className="body-forms-ReportForm-container flex-column rounded w-25">
                     <Form>
                         <h1 className="text-center fw-bold">Report a Safety Issue</h1>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -22,17 +22,17 @@ function ReportForm()
                         <div className="d-flex justify-content-evenly">
                             <div className="d-flex flex-column w-25">
                                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <Form.Check className="body-form-checkbox" type="checkbox" label="Headlight" />
-                                    <Form.Check className="body-form-checkbox" type="checkbox" label="Break Light" />
-                                    <Form.Check className="body-form-checkbox" type="checkbox" label="Front Blinker" />
+                                    <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Headlight" />
+                                    <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Break Light" />
+                                    <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Front Blinker" />
                                 </Form.Group>
                             </div>
 
                             <div className="d-flex flex-column w-25">
                                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <Form.Check className="body-form-checkbox" type="checkbox" label="Tail Light" />
-                                    <Form.Check className="body-form-checkbox" type="checkbox" label="Reverse Light" />
-                                    <Form.Check className="body-form-checkbox" type="checkbox" label="Rear Blinker" />
+                                    <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Tail Light" />
+                                    <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Reverse Light" />
+                                    <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Rear Blinker" />
                                 </Form.Group>
                             </div>
                         </div>
