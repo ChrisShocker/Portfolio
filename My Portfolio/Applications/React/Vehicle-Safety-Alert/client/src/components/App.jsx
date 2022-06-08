@@ -1,12 +1,14 @@
 import React from "react";
-import Form from "./body/Form";
+import ReportForm from "./body/Forms/ReportForm";
+import SearchForm from "./body/Forms/SearchForm";
 import Intro from "./body/Intro";
 
 function App(){
     return(
         <div>
             <Intro></Intro>
-            <Form></Form>
+            <ReportForm></ReportForm>
+            <SearchForm></SearchForm>
         </div>
     );
 }
