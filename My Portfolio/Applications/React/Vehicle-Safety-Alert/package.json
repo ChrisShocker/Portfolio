@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "Report vehicle issues via license plate to help keep roads safe",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": "16.x"
   },
+  "scripts": {
+    "start": "node server/server.js",
+    "build": "cd client/ && npm install && npm run build"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "client/node_modules"
+  ],
   "author": "Christian Andersen",
   "license": "GPL-3.0"
 }
