@@ -1,0 +1,11 @@
+{
+  "name": "vehicle-safety-alert",
+  "version": "1.0.0",
+  "description": "Report vehicle issues via license plate to help keep roads safe",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Andersen",
+  "license": "GPL-3.0"
+}
