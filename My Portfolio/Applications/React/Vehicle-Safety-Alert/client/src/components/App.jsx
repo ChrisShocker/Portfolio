@@ -1,8 +1,11 @@
 import React from "react";
+import Form from "./body/Form";
 
 function App(){
     return(
-        <h1>Hello</h1>
+        <div>
+            <Form></Form>
+        </div>
     );
 }
 
