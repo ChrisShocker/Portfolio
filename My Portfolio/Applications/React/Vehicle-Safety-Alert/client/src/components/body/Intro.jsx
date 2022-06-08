@@ -8,7 +8,7 @@ function Intro()
         {
             alert("This website is still a WIP");
 
-        }, 3000);
+        }, 500);
         return () =>
         {
             clearTimeout(timer);
