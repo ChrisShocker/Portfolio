@@ -23,18 +23,32 @@ function ReportForm()
         });
     }
 
-    function handleCheckbox(event)
+    function handleCheckbox(event, props)
     {
-        // console.log(event.target.labels)
+        console.log(event.target.checked);
         const { name, value } = event.target;
-        console.log(value);
-        setReport(prevValue =>
+
+        if (event.target.checked)
         {
-            return {
-                ...prevValue,
-                [name]: value,
-            }
-        });
+            setReport(prevValue =>
+            {
+                return {
+                    ...prevValue,
+                    [name]: value,
+                }
+            });
+        }
+        else{
+            setReport(prevValue =>
+            {
+                return {
+                    ...prevValue,
+                    issue: "",
+                }
+            });
+
+        }
+
     }
 
     async function handleSubmit(event)
@@ -90,24 +104,60 @@ function ReportForm()
                     <div className="d-flex justify-content-evenly">
                         <div className="d-flex flex-column w-25">
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check 
-                                onChange={handleCheckbox}
-                                className="body-forms-ReportForm-checkbox" 
-                                type="checkbox" 
-                                label="Headlight"
-                                name="issue"
-                                value="headlight"
+                                <Form.Check
+                                    onChange={handleCheckbox}
+                                    className="body-forms-ReportForm-checkbox"
+                                    type="checkbox"
+                                    label="Headlight"
+                                    name="issue"
+                                    value="headlight"
                                 />
-                                <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Break Light" />
-                                <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Front Blinker" />
+
+                                <Form.Check
+                                    onChange={handleCheckbox}
+                                    className="body-forms-ReportForm-checkbox"
+                                    type="checkbox"
+                                    label="Break Light"
+                                    name="issue"
+                                    value="Break Light"
+                                />
+
+                                <Form.Check
+                                    onChange={handleCheckbox}
+                                    className="body-forms-ReportForm-checkbox"
+                                    type="checkbox"
+                                    label="Front Blinker"
+                                    name="issue"
+                                    value="Front Blinker"
+                                />
                             </Form.Group>
                         </div>
 
                         <div className="d-flex flex-column w-25">
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Tail Light" />
-                                <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Reverse Light" />
-                                <Form.Check className="body-forms-ReportForm-checkbox" type="checkbox" label="Rear Blinker" />
+                                <Form.Check 
+                                className="body-forms-ReportForm-checkbox" 
+                                type="checkbox" 
+                                label="Tail Light" 
+                                name="issue"
+                                value="Tail Light"
+                                />
+
+                                <Form.Check 
+                                className="body-forms-ReportForm-checkbox" 
+                                type="checkbox" 
+                                label="Reverse Light" 
+                                name="issue"
+                                value="Reverse Light"
+                                />
+
+                                <Form.Check 
+                                className="body-forms-ReportForm-checkbox" 
+                                type="checkbox" 
+                                label="Rear Blinker" 
+                                name="issue"
+                                value="Rear Light"
+                                />
                             </Form.Group>
                         </div>
                     </div>
