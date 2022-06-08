@@ -1,8 +1,22 @@
 import React from "react";
 
-function Intro(){
-    return(
-        <h1>Intro Section</h1>
+function Intro()
+{
+    return (
+        <div className="d-flex flex-column justify-content-center align-items-center">
+            <div>
+                <h1>Welcome!</h1>
+            </div>
+            <div>
+                <p className="lead">
+                    Please report the following issues to help keep our roads safe
+                </p>
+                <p className="lead">
+                    Also, please lookup your License plate to ensure you're driving safe
+                </p>
+            </div>
+
+        </div>
     );
 }
 
