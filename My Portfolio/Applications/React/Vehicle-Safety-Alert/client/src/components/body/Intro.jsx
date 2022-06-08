@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Intro()
 {
+    useEffect(() =>
+    {
+
+        var timer = setTimeout(() =>
+        {
+            alert("This website is still a WIP");
+
+        }, 3000);
+        return () =>
+        {
+            clearTimeout(timer);
+        }
+    }, []);
+
+
     return (
         <div className="d-flex flex-column justify-content-center align-items-center">
             <div>
